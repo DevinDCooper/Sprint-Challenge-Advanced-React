@@ -10,7 +10,7 @@ const PlayersCard = ({data}) => {
     <div className ="play-card">
       <Card>
         <CardBody>
-          <CardTitle>Name: {data.name}</CardTitle>
+          <CardTitle data-test-id="name header">Names: {data.name}</CardTitle>
         <br/>
           <CardSubtitle>Country: {data.country}</CardSubtitle>
           <CardText>Searches: {data.searches}</CardText>
