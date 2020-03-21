@@ -1,0 +1,12 @@
+import React, { useEffect } from "react";
+import useLocalStorage from "./useLocalStorage";
+function useDarkMode() {
+  const [toggleOnorOff, setOnorOff] = useLocalStorage( false);
+  useEffect(() => {
+    toggleOnorOff
+      ? document.body.classList.add("dark-mode")
+      : document.body.classList.remove("dark-mode");
+  }, [setOnorOff]);
+  return [toggleOnorOff, setOnorOff];
+}
+export default useDarkMode;
